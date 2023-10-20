@@ -148,6 +148,47 @@ myBirthday <span class="token operator">=</span> <span class="token string">'01.
 </ul>
 </li>
 </ul>
+<h2 id="자료형" style="position:relative;"><a href="#%EC%9E%90%EB%A3%8C%ED%98%95" aria-label="자료형 permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>자료형</h2>
+<p>자바스크립트에서 값은 <code class="language-text">동적 타입</code>(dynamically typed)을 갖고 있다.</p>
+<blockquote>
+<p>동적타입이란? 자료의 타입은 있지만, 변수에 저장되는 값의 타입은 언제든지 바뀔수 있는 타입을 의미한다.</p>
+</blockquote>
+<p>자바스크립트의 변수는 자료형에 관계없이 모든 데이터일 수 있다.
+즉 변수는 어떤 순간에 문자열이 될 수도, 숫자가 될 수도 있다.</p>
+<div class="gatsby-highlight" data-language="js"><pre class="language-js"><code class="language-js"><span class="token comment">// no error</span>
+<span class="token keyword">let</span> message <span class="token operator">=</span> <span class="token string">'hello'</span><span class="token punctuation">;</span> <span class="token comment">// 문자열이 된다.</span>
+message <span class="token operator">=</span> <span class="token number">123456</span><span class="token punctuation">;</span> <span class="token comment">// 숫자가 된다.</span></code></pre></div>
+<h2 id="숫자형" style="position:relative;"><a href="#%EC%88%AB%EC%9E%90%ED%98%95" aria-label="숫자형 permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>숫자형</h2>
+<div class="gatsby-highlight" data-language="js"><pre class="language-js"><code class="language-js"><span class="token keyword">let</span> n <span class="token operator">=</span> <span class="token number">123</span><span class="token punctuation">;</span>
+n <span class="token operator">=</span> <span class="token number">12.345</span><span class="token punctuation">;</span></code></pre></div>
+<ul>
+<li>곱셈 *, 나눗셈 /, 덧셈 +, 뺄셈 - 등등이 있다.</li>
+<li>NaN은 계산 중에 에러가 발생했다는 것을 알려주는 값이다. 주로 문자열을 숫자와 같이 계산식을하면 NaN이 반환됨</li>
+<li></li>
+</ul>
+<h2 id="불린형" style="position:relative;"><a href="#%EB%B6%88%EB%A6%B0%ED%98%95" aria-label="불린형 permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>불린형</h2>
+<p>논리 타입으로 true와 false 두 가지 값 밖에 없다.</p>
+<h2 id="null-값" style="position:relative;"><a href="#null-%EA%B0%92" aria-label="null 값 permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>null 값</h2>
+<p>null 값은 오로지 null만 포함한다. 어느 자료형에도 속하지 않는다.</p>
+<h2 id="undefined" style="position:relative;"><a href="#undefined" aria-label="undefined permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>undefined</h2>
+<p>undefined 값도 null 값처럼 자신만의 자료형을 형성한다.
+주로 값이 할당되지 않은 상태를 나타낸다.</p>
+<p>그렇다고해서, 다음과 같이 직접 할당하지는 말자</p>
+<div class="gatsby-highlight" data-language="js"><pre class="language-js"><code class="language-js"><span class="token keyword">let</span> age <span class="token operator">=</span> <span class="token number">100</span><span class="token punctuation">;</span>
+
+<span class="token comment">// 값을 undefined로 바꿉니다.</span>
+age <span class="token operator">=</span> <span class="token keyword">undefined</span><span class="token punctuation">;</span>
+
+<span class="token function">alert</span><span class="token punctuation">(</span>age<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// "undefined"</span></code></pre></div>
+<p>undefined는 값이 할당되지 않은 변수의 초기값이라는 예약어로 남겨두기 위해서, null을 사용하자</p>
+<div class="gatsby-highlight" data-language="js"><pre class="language-js"><code class="language-js"><span class="token keyword">let</span> age <span class="token operator">=</span> <span class="token keyword">null</span><span class="token punctuation">;</span></code></pre></div>
+<h2 id="객체-심볼" style="position:relative;"><a href="#%EA%B0%9D%EC%B2%B4-%EC%8B%AC%EB%B3%BC" aria-label="객체 심볼 permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>객체, 심볼</h2>
+<p>객체(object)는 데이터 컬렉션이나 복잡한 개체를 표현 할 수있다.
+심볼(symbol)형은 객체의 고유한 식별자(unique identifier)를 만들 때 사용된다.</p>
+<h2 id="typeof-연산자" style="position:relative;"><a href="#typeof-%EC%97%B0%EC%82%B0%EC%9E%90" aria-label="typeof 연산자 permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>typeof 연산자</h2>
+<p>typeof 연산자는 인수의 자료형을 반환한다. 자료형에 따라 처리 방식을 다르게 하고 싶거나 변수의 자료형을 빠르게 알아내고자 할 때 유용하다.</p>
+<h2 id="참조" style="position:relative;"><a href="#%EC%B0%B8%EC%A1%B0" aria-label="참조 permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>참조</h2>
+<p><a href="https://ko.javascript.info/">모던 자바스크립트</a></p>
 <div class="table-of-contents">
 <ul>
 <li>
@@ -164,6 +205,30 @@ myBirthday <span class="token operator">=</span> <span class="token string">'01.
 </li>
 <li>
 <p><a href="#%EB%B0%94%EB%9E%8C%EC%A7%81%ED%95%9C-%EB%B3%80%EC%88%98%EB%AA%85">바람직한 변수명</a></p>
+</li>
+<li>
+<p><a href="#%EC%9E%90%EB%A3%8C%ED%98%95">자료형</a></p>
+</li>
+<li>
+<p><a href="#%EC%88%AB%EC%9E%90%ED%98%95">숫자형</a></p>
+</li>
+<li>
+<p><a href="#%EB%B6%88%EB%A6%B0%ED%98%95">불린형</a></p>
+</li>
+<li>
+<p><a href="#null-%EA%B0%92">null 값</a></p>
+</li>
+<li>
+<p><a href="#undefined">undefined</a></p>
+</li>
+<li>
+<p><a href="#%EA%B0%9D%EC%B2%B4-%EC%8B%AC%EB%B3%BC">객체, 심볼</a></p>
+</li>
+<li>
+<p><a href="#typeof-%EC%97%B0%EC%82%B0%EC%9E%90">typeof 연산자</a></p>
+</li>
+<li>
+<p><a href="#%EC%B0%B8%EC%A1%B0">참조</a></p>
 </li>
 </ul>
 </div></div></div><div class="post-navigator"><div class="post-navigator-card-wrapper"><a class="post-card prev" href="/ModernJavaScript/javascript00/"><div class="direction">이전 글</div><div class="title">자바스크립트란?</div></a></div><div class="post-navigator-card-wrapper"></div></div><div class="utterances"></div></main><footer class="page-footer-wrapper"><p class="page-footer">© <!-- -->2023<!-- --> <a href="https://github.com/jungsikjeong">정중식</a> powered by<a href="https://github.com/zoomKoding/zoomkoding-gatsby-blog"> zoomkoding-gatsby-blog</a></p></footer><div class="dark-mode-button-wrapper"><button class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeMedium dark-mode-button css-1yxmbwk" tabindex="0" type="button"><svg class="MuiSvgIcon-root MuiSvgIcon-fontSizeLarge dark-mode-icon css-6flbmm" focusable="false" aria-hidden="true" viewBox="0 0 24 24" data-testid="DarkModeIcon"><path d="M12 3c-4.97 0-9 4.03-9 9s4.03 9 9 9 9-4.03 9-9c0-.46-.04-.92-.1-1.36-.98 1.37-2.58 2.26-4.4 2.26-2.98 0-5.4-2.42-5.4-5.4 0-1.81.89-3.42 2.26-4.4-.44-.06-.9-.1-1.36-.1z"></path></svg></button></div></div></div><div id="gatsby-announcer" style="position:absolute;top:0;width:1px;height:1px;padding:0;overflow:hidden;clip:rect(0, 0, 0, 0);white-space:nowrap;border:0" aria-live="assertive" aria-atomic="true"></div></div><script id="gatsby-script-loader">/*<![CDATA[*/window.pagePath="/ModernJavaScript/javascript01/";window.___webpackCompilationHash="274b01f523a674aa1a42";/*]]>*/</script><script id="gatsby-chunk-mapping">/*<![CDATA[*/window.___chunkMapping={"polyfill":["/polyfill-f196834924f88edde8fc.js"],"app":["/app-81fc53c6d9e9458d7ffe.js"],"component---cache-caches-gatsby-plugin-offline-app-shell-js":["/component---cache-caches-gatsby-plugin-offline-app-shell-js-12b5d8159c7e67968cd6.js"],"component---src-pages-404-js":["/component---src-pages-404-js-29258485103e835516fd.js"],"component---src-pages-about-js":["/component---src-pages-about-js-47be03f1ced26e7a5f04.js"],"component---src-pages-index-js":["/component---src-pages-index-js-02698fe531e86750398f.js"],"component---src-templates-blog-template-js":["/component---src-templates-blog-template-js-5269d12109f66a1f5859.js"],"component---src-templates-category-template-js":["/component---src-templates-category-template-js-addefa15e14ce4af818f.js"]};/*]]>*/</script><script src="/polyfill-f196834924f88edde8fc.js" nomodule=""></script><script src="/app-81fc53c6d9e9458d7ffe.js" async=""></script><script src="/framework-de157c6b30d4790e4e81.js" async=""></script><script src="/webpack-runtime-96e39734edf1ad9f5967.js" async=""></script></body></html>
