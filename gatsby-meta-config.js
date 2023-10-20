@@ -6,16 +6,16 @@ module.exports = {
   ogImage: `/og-image.png`, // Path to your in the 'static' folder
   comments: {
     utterances: {
-      repo: `zoomkoding/zoomkoding-gatsby-blog`, // `zoomkoding/zoomkoding-gatsby-blog`,
+      repo: `jungsikjeong/jungsikjeong.github.io`, // `zoomkoding/zoomkoding-gatsby-blog`,
     },
   },
-  ga: 'UA-134826755-2', // Google Analytics Tracking ID
+  ga: 'UA-147246451-1', // Google Analytics Tracking ID
   author: {
     name: `정중식`,
     bio: {
       role: `개발자`,
-      description: ['주변의 필요에 관심이 있는', '성장과 경험을 추구하는'],
-      thumbnail: 'zoomkoding.gif', // Path to the image in the 'asset' folder
+      description: '',
+      thumbnail: 'me.png', // Path to the image in the 'asset' folder
     },
     social: {
       github: `https://github.com/jungsikjeong`,
