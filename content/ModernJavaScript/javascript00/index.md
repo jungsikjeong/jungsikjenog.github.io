@@ -7,8 +7,6 @@ tags: ModernJavaScript
 categories: ModernJavaScript
 ---
 
-# 자바스크립트란?
-
 - 웹페이지에 생동감을 불어 넣기 위해 만들어진 프로그래밍 언어
 - 자바스크립트로 작성한 프로그램을 script 라고 불림
 - script는 웹페이지의 HTML 안에 작성 가능한데, 웹페이지를 불러올 때 script가 자동으로 실행 됨
@@ -20,7 +18,7 @@ categories: ModernJavaScript
 - `엔진`의 종류는 다양하다.
 - ex) V8(Chrome과 Opera에서 사용), SpiderMonkey(Firefox에서 사용), IE 기타 등등..
 
-> ### 잠깐,엔진은 어떻게 동작할까?
+> ### 엔진은 어떻게 동작할까?
 >
 > 엔진의 기본 원리는 다음과 같다.
 >
@@ -42,3 +40,7 @@ categories: ModernJavaScript
 ## 참조
 
 [모던 자바스크립트](https://ko.javascript.info/)
+
+```toc
+
+```
