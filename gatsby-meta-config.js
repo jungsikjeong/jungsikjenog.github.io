@@ -9,7 +9,7 @@ module.exports = {
       repo: `jungsikjeong/jungsikjeong.github.io`, // `zoomkoding/zoomkoding-gatsby-blog`,
     },
   },
-  ga: 'UA-147246451-1', // Google Analytics Tracking ID
+  ga: 'G-CC0WFTGEQV', // Google Analytics Tracking ID
   author: {
     name: `정중식`,
     bio: {
