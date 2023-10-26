@@ -14,7 +14,7 @@ module.exports = {
     name: `정중식`,
     bio: {
       role: `개발자`,
-      description: '',
+      description: ['기록이 쌓이면 뭐든된다'],
       thumbnail: 'me.png', // Path to the image in the 'asset' folder
     },
     social: {
@@ -44,7 +44,7 @@ module.exports = {
       // ========================================================
       {
         date: '2023.10',
-        activity: '블로그 새롭게 시작',
+        activity: '블로그 새롭게 시작 / 기록이 쌓이면 뭐든된다',
       },
     ],
 
