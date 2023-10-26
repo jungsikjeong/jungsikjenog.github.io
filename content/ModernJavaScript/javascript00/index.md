@@ -3,8 +3,8 @@ emoji: ✍
 title: 자바스크립트란?
 date: '2023-10-20 16:08:00'
 author: 정중식
-tags: ModernJavaScript
-categories: ModernJavaScript
+tags: javascript
+categories: javascript
 ---
 
 - 웹페이지에 생동감을 불어 넣기 위해 만들어진 프로그래밍 언어
