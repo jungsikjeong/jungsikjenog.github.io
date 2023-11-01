@@ -31,7 +31,7 @@ categories: javascript
 
 ## 참조
 
-[모던 자바스크립트](https://ko.javascript.info/polyfills)
+[모던 자바스크립트](https://ko.javascript.info/polyfills)<br/>
 [폴리필 이란?](https://velog.io/@katanazero86/polyfill%ED%8F%B4%EB%A6%AC%ED%95%84-%EC%9D%B4%EB%9E%80)
 
 ```toc
