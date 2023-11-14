@@ -68,9 +68,41 @@ categories: TIL
 
 팀 플젝중 깃 충돌이 일어났다.
 각자 브랜치를 따고 푸쉬후 pr을 날려서 자신이 수락하는 형태였는데 이 방식이 문제였다.
-앞으로 이런 상황을 방지하고자 팀 리더가 다음과 같은 방안을 제시했다.
+앞으로 이런 상황을 방지하고자 프론트엔드 리더분이 다음과 같은 방안을 제시했다.
 
 - 다같이 온라인으로 만나서 1주일 단위로 pr 할 것 (일요일 회의 끝나고 하는걸로)
 - pr하기전 정해진 리뷰어가 코드를 확인후 수락해줄것
 
-깃 충돌을 말로만 들었는데 이렇게 광범위한 충돌을 경험한게 갚진 경험인 것 같고 팀 리더가 헤쳐나가고, 소통하는거를 지켜보는 것 만으로도 커뮤니케이션 방식과 깃 충돌에 대처하는 것 등등에대해서 한단계 도약한거 같은 기분이다.
+깃 충돌을 말로만 들었는데 이렇게 광범위한 충돌을 경험한게 갚진 경험인 것 같고 프론트엔드 리더분이 헤쳐나가고, 소통하는거를 지켜보는 것 만으로도 커뮤니케이션 방식과 깃 충돌에 대처하는 것 등등에대해서 한단계 도약한거 같은 기분이다.
+
+## 11월 14일
+
+팀 플젝 작업
+
+- 제품 리스트 페이지 디자인 변경사항 css적용
+  - 폰트사이즈, 마진값, 패딩값 기타 등등 적용 <br/>
+- 제품 리스트 페이지 카테고리 api통신 적용
+
+- postman에서는 문제없었으나, 로컬(브라우저 환경)에서 api통신할때 401에러 발생
+  - 프록시 문제였다. 프론트엔드 리더분이 해결해주셨다.
+    현재 플젝 환경이 vite+리액트 환경인데 vite 환경설정 및 axios 설정으로 해결했다.
+
+axios 환경설정한 코드 첨부.
+
+```js
+import axios from 'axios';
+axios.defaults.withCredentials = true;
+const instance = axios.create({
+  baseURL: '/api',
+  timeout: 1000,
+  headers: {
+    'Content-Type': `application/json;charset=UTF-8`,
+    Accept: 'application/json',
+    'Access-Control-Allow-Origin': `http://localhost:주소`,
+    'Access-Control-Allow-Credentials': 'true',
+    withCredential: true,
+  },
+});
+
+export default instance;
+```
