@@ -106,3 +106,24 @@ const instance = axios.create({
 
 export default instance;
 ```
+
+# 11월 15일
+
+팀 플젝 작업
+
+- axios를 사용해서 카테고리 목록을 불러오는 것을 react-query로 바꿧다.
+
+- 향수 데이터 불러오는것을 react-query로 바꿧다.
+
+- react-query 개념을 다시 짚고 넘어갔다.
+  - useQuery:일반적으로 데이터 get할때 사용
+  - useMutation:put,post,delete할때 사용
+
+<br/>
+
+- 카테고리를 선택하면 url에 query로 찍히는게 어떻겠냐는 제안을 받아서 임시로 구현을 했다.
+  Ex) `http://localhost:5001/perfumes?category='프루티'`
+  지금 현재는 useState에 카테고리 값이 저장되어있는 상태라, 새로고침을 하면 초기의 카테고리로 돌아가게된다.
+  이것은 사용자가 불편을 초래할 수 도 있다는 의견인데.. 나도 이에 동의해서 구현을 해봤다.
+  프론트엔드 리더가 참고하면 좋을만한 링크들을 보내줘서 그것을 보고 구현을 해봤다.
+  useSearchParams을 활용했다.
