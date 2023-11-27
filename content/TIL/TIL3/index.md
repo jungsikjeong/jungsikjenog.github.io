@@ -89,3 +89,10 @@ const FlexBox = ({
 
 export default FlexBox
 ```
+
+## 11월27일
+
+팀 프로젝트 작업
+
+- 제품 상세 페이지 사소한 UI 버그를 수정해줬다.
+- api 연결작업 진행중..
