@@ -116,4 +116,4 @@ export default FlexBox
 팀 프로젝트 작업 및 인라인스타일 ,mui sx, mui - Box 차이점 공부
 
 - 데이터를 받아올 동안 스켈레톤 UI를 보여주는 작업 일부 완료
-- 인라인 스타일을 지양하는 이유에대해서 공부하고 기록했다.
+- 인라인 스타일을 지양하는 이유에대해서 공부하고 기록했다.[기록한 곳](https://jungsikjeong.github.io/css/css00/)
