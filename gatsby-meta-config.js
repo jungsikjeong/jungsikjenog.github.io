@@ -46,6 +46,10 @@ module.exports = {
         date: '2023.10',
         activity: '블로그 새롭게 시작 / 기록이 쌓이면 뭐든된다',
       },
+      {
+        date: '2023.12',
+        activity: '첫 팀 프로젝트 / Read A Perfume',
+      },
     ],
 
     career: [
