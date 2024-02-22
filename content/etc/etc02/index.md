@@ -21,7 +21,7 @@ categories: etc
 }
 ```
 
-이렇게 `@layer` 키워드를 이용해서 설정후
+이렇게 `@apply` 키워드를 이용해서 설정후
 
 ```js
 <button className="btn-primary">Save changes</button>
