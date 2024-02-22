@@ -1,7 +1,7 @@
 ---
 emoji: ✍
 title: Nextjs 여러 기능 살펴보기
-date: '2024-02-22 16:08:00'
+date: '2024-02-22 16:09:00'
 author: 정중식
 tags: next.js
 categories: next.js

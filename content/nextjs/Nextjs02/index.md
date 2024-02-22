@@ -1,7 +1,7 @@
 ---
 emoji: ✍
 title: Nextjs Script컴포넌트
-date: '2024-02-22 16:08:00'
+date: '2024-02-22 16:10:00'
 author: 정중식
 tags: next.js
 categories: next.js
