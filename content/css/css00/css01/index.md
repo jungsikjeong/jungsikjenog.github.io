@@ -3,8 +3,8 @@ emoji: ✍
 title: Tailwind
 date: '2024-02-22 16:08:00'
 author: 정중식
-tags: etc
-categories: etc
+tags: css
+categories: css
 ---
 
 ## Tailwind 재사용하기
