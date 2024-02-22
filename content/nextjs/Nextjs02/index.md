@@ -53,6 +53,46 @@ export default function Dashboard() {
 - onError : 스크립트 로드 중에 오류가 발생할 때 실행할 함수 지정
   `Ex) onError={onErrorFunc}`
 
+### Script: strategy 속성 더 살펴보기
+
+- 스크립트의 로드 전략을 설정할 수 있는 옵션이다. 주로 스크립트가 언제 로드되고 실행할 지 지정한다.
+
+- 다음 네가지 옵션이 있다.
+
+  - afterInteractive(기본값): 스크립트가 페이지 상호 작용 가능한 후에 로드되고 실행됨
+    <br/>
+
+  - beforeInteractive: 스크립트가 페이지의 상호 작용 가능한 상태 이전에 로드되고 실행됨
+    (hydration 이전) <br/>
+
+  - lazyOnLoad: 스크립트가 페이지가 완전히 로드된 후에 로드되고 실행됨 (브라우저 idle 타임에)
+    <br/>
+
+  - worker(experimental): Service Worker와 같은 백그라운드 워커 스크립트를 로드하고 실행하는데 사용
+    (오프라인 캐싱이나 알림등)
+
+### Script: onReady 속성과 onLoad속성 더 살펴보기
+
+- onLoad: 스크립트 파일이 브라우저에 성공적으로 로드될 때 호출된다.
+
+  - 스크립트 파일에 추가적인 초기화 작업이 필요한 경우, onLoad를 사용해서 수행가능하다.
+  - beforeInteractive과는 사용 불가함.(onReady 사용권장)<br/>
+
+- onReady: 스크립트 파일이 브라우저에 로드되고,스크립트 내 모든 작업이 완료되었으며, 페이지가 상호 작용 가능한 상태가 될 때 호출된다.
+  - 스크립트가 완전히 초기화 되고, 페이지의 모든 요소 초기화 + 상호 작용 작업 완료된 후 호출됨
+
+예시
+
+```js
+<Script
+  id="google-maps"
+  src="https://maps.googleapis.com/maps/api/js"
+  onReady={() => {
+    new google.maps.Map(mapRef.current, { center: { lat: -34.397, lng: 150.644 } }, (zoom: 8));
+  }}
+/>
+```
+
 ```toc
 
 ```
