@@ -60,7 +60,7 @@ prisma세팅할 때 붙여넣어주자.
 
 <br/>
 
-## 3 prisma schema 생성 및 seed 생성
+## 3 prisma schema 생성 및 마이그레이션파일 생성
 
 스키마 설정을 한번 해보자.
 
@@ -101,7 +101,7 @@ model Store {
 - 이후 터미널에 다음과 같이 입력
   `npx prisma migrate dev --name init`
 
-- 그럼 이런 문구가 나오고,
+- 그럼 아래와 같은 문구가 나오고,
 
 <br/>
 
@@ -143,7 +143,7 @@ prisma/migrations/migration.sql 의 파일이 생긴다.
 <br/>
 <br/>
 
-## 4
+## 4 seed 생성
 
 `npm i -D ts-node`
 
