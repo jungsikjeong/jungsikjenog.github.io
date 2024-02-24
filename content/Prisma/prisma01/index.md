@@ -110,6 +110,71 @@ prisma/migrations/migration.sql 의 파일이 생긴다.
 
 <img src='./3-3.png' alt=' img' />
 
+# 4
+
+`npm i -D ts-node`
+
+> nextjs를 사용하므로 다음을 package.json에 붙여넣자
+
+```js
+"prisma": {
+  "seed": "ts-node --compiler-options {\"module\":\"CommonJS\"} prisma/seed.ts"
+},
+```
+
+- prisma/seed.ts 파일 생성 후 다음처럼 입력해주자<br/>
+
+> 참고로 seed.ts파일 생성 예시는 [여기서확인](https://www.prisma.io/docs/orm/prisma-migrate/workflows/seeding#how-to-seed-your-database-in-prisma-orm) 하자
+
+```js
+import { PrismaClient } from '@prisma/client';
+import * as data from '../src/data/store_data.json';
+
+const prisma = new PrismaClient();
+
+async function seedData() {
+  // 로컬에 등록된 store_data.json 데이터중, 원하는 것들만 꺼내옴
+  data?.['DATA']?.map(async (store) => {
+    const storeData = {
+      phone: store?.tel_no,
+      address: store?.rdn_code_nm,
+      lat: store?.y_dnts,
+      lng: store?.x_cnts,
+      name: store?.upso_nm,
+      category: store?.bizcnd_code_nm,
+      storeType: store?.cob_code_nm,
+      foodCertifyName: store?.crtfc_gbn_nm,
+    };
+
+    // prisma 생성
+    // 앞전에 생성한 스키마 StoreModal이있어서 store라고 name을 지음
+    const res = await prisma.store.create({
+      data: storeData,
+    });
+    console.log(res);
+  });
+}
+
+async function main() {
+  await seedData();
+}
+
+main()
+  .catch((e) => {
+    console.log(e);
+    process.exit(1);
+  })
+  .finally(() => {
+    prisma.$disconnect();
+  });
+```
+
+`// 프리즈마 생성`이라고 주석처리된 부분으로 프리즈마를 생성하고,
+`npx prisma db seed`를 입력해주면 seed가 생성이 되고,
+Supabase를 가서 확인해보면 데이터가 생성되어있는걸 볼 수 있다.
+
+<img src='./4-1.png' alt=' img' />
+
 ```toc
 
 ```
