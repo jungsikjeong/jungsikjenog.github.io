@@ -45,6 +45,71 @@ prisma세팅할 때 붙여넣어주자.
 
 # 3
 
+스키마 설정을 한번 해보자.
+
+prisma/schema.prisma에 다음과 같이 코드를 작성해보자
+modal User와 Store의 스키마를 작성해줬다.
+
+```js
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model User {
+    id       Int  @id @default(autoincrement())
+    email    String @unique
+    name     String
+}
+
+model Store {
+    id        Int  @id @default(autoincrement())
+    phone     String? // tel_no
+    address   String? //rdn_code_nm
+    lat       String? // y_dnts
+    lng       String? //x_cnts
+    name      String? //upso_nm
+    category  String? //bizcnd_code_nm
+    storeType String? //cob_code_nm
+    foodCertifyName String? // crtfc_gbn_nm
+}
+```
+
+- 이후 터미널에 다음과 같이 입력
+  `npx prisma migrate dev --name init`
+
+- 그럼 이런 문구가 나오고,
+
+```js
+migrations/
+  └─ 20240224005913_init/
+    └─ migration.sql
+
+Your database is now in sync with your schema.
+```
+
+prisma/migrations/migration.sql 의 파일이 생긴다.
+방금 작성한 스키마 모델이 sql형태로 변환되어 저장이된것이다.
+
+<img src='./3-1.png' alt=' img' />
+
+위의 이미지같이 생성이되는데, 이 파일은 `절대 수정하면 안되고`
+혹시나 변경 사항이 생기면 새롭게 만들어줘야한다.
+
+`npx prisma studio`를 입력하면 #2에서는 에러가 떳던 화면이 다음과 같이 나오는걸 볼 수있다.
+
+<img src='./3-2.png' alt=' img' />
+
+<br/>
+
+마찬가지로 원격 DB인 Supabase 홈페이지에서도 모델이 생성된거를 확인할 수 있다.
+
+<img src='./3-3.png' alt=' img' />
+
 ```toc
 
 ```
