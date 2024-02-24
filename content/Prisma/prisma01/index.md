@@ -7,7 +7,7 @@ tags: prisma Supabase
 categories: prisma Supabase
 ---
 
-## 1
+## 1 Supabase 회원가입 및 프로젝트 생성
 
 [Supabase](https://supabase.com)에서 회원가입후 프로젝트를 생성한다.
 
@@ -31,9 +31,8 @@ Region은 한국 서울로해주자
 prisma세팅할 때 붙여넣어주자.
 
 <br/>
-<br/>
 
-## 2
+## 2 prisma init 및 supabase url연결
 
 `npm i -D prisma`
 
@@ -61,7 +60,7 @@ prisma세팅할 때 붙여넣어주자.
 
 <br/>
 
-## 3
+## 3 prisma schema 생성 및 seed 생성
 
 스키마 설정을 한번 해보자.
 
