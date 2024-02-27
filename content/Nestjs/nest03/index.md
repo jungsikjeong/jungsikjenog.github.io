@@ -55,6 +55,30 @@ import { BoardsService } from './boards.service';
 export class BoardsModule {}
 ```
 
+## Service 만들기
+
+Service안에서는 주로 데이터베이스 관련된 로직을 처리한다.
+
+> EX) DB에서 데이터를 가져오거나 DB안에 게시판을 생성할 때 그 생성한 게시판 정보를 넣어주는 등의 로직을 처리함
+
+`nest g service boards --no-spec`
+
+위의 명령어를 터미널에 입력해주면 controller때와 마찬가지로 service.ts파일이 생성되고, module.ts에 자동으로 등록되어있다.
+
+자동으로 등록되있는 모습..
+
+```js
+import { Module } from '@nestjs/common';
+import { BoardsController } from './boards.controller';
+import { BoardsService } from './boards.service';
+
+@Module({
+  controllers: [BoardsController],
+  providers: [BoardsService],
+})
+export class BoardsModule {}
+```
+
 ```toc
 
 ```
