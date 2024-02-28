@@ -20,13 +20,12 @@ board.model.ts를 생성한다.
 
 ## 모델 정의할 때
 
-다음 두가지로 정의해 줄 수있다.
+다음 두가지로 정의해 줄 수 있다.
 
 - interface정의 : 변수의 타입만을 정의한다.
-
 - classes정의 : 변수의 타입도 체크하고 인스턴스 또한 생성할 수 있다.
 
-다음은 interface의 예이다
+다음은 interface로 정의하는 예시임
 
 /board/board.modal.ts
 
